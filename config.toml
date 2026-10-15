@@ -1,0 +1,11 @@
+[server]
+maxUploadSize = 15
+enableCORS = true
+enableXsrfProtection = true
+headless = true
+
+[client]
+showErrorDetails = false
+
+[theme]
+primaryColor = "#2463EB"

@@ -1,0 +1,13 @@
+Order_ID,Order_Date,Customer,Amount,Region
+ORD-001,2026-01-05, Acme ,"$1,250",North
+ORD-002,2026-01-15,BETA,$950,South
+ORD-003,16/01/2026,Acme,1200,North
+ORD-004,2026-02-01,Cedar,"$1,800",East
+ORD-005,13/02/2026, acme ,$650,north
+ORD-006,2026-02-25,Beta,"$2,100",South
+ORD-007,2026-03-03,Cedar,1300,East
+ORD-008,14/03/2026,Acme,"$1,550",North
+ORD-008,14/03/2026,Acme,"$1,550",North
+ORD-009,2026-03-20,Beta,,south
+ORD-010,2026-04-05,Cedar,$980,East
+ORD-011,16/04/2026,Acme,"$3,500",North
