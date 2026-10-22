@@ -68,7 +68,7 @@ def test_five_stages_import_and_run_through(monkeypatch):
     shared.diagnosis = diag
     shared.decisions = diag.plan
 
-    src = str(Path(__file__).resolve().parents[1] / 'app.py')
+    src = str(Path(__file__).resolve().parent / "app.py")
     for step in (1,2,3,4,5):
         shared.step = step
         runpy.run_path(src, run_name='__main__')
