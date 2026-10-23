@@ -9,6 +9,7 @@ from pathlib import Path
 import re
 from zipfile import BadZipFile, ZipFile
 import pandas as pd
+from broom_core.missing_values import normalize_definite_blanks
 
 MAX_UPLOAD_BYTES = 15 * 1024 * 1024
 MAX_ROWS = 100_000
@@ -89,6 +90,9 @@ def read_uploaded_file(data: bytes, filename: str) -> pd.DataFrame:
                     errors.append(exc)
             else:
                 raise InputRejected("CSV text encoding unsupported. Save as UTF-8 CSV.")
+            # Normalize only definite blank CSV cells; preserve NA, NULL, '-' and IDs.
+            for column in df.columns:
+                df[column] = normalize_definite_blanks(df[column])
         else:
             raise InputRejected("Use a CSV or .xlsx file only.")
     except InputRejected:
